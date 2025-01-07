@@ -1,4 +1,108 @@
+/* Modern CSS with animations and responsive design */
 body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 40px;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #333;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    animation: slideIn 1s ease;
+}
+
+/* Navigation styles */
+nav {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #2c3e50;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Social links */
+.social-links {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-button {
+    text-decoration: none;
+    color: #2c3e50;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid #3498db;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-button:hover {
+    background-color: #3498db;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
 } 
